@@ -34,7 +34,7 @@ const FAQSection = () => (
         className="text-center mb-12"
       >
         <p className="text-sm font-medium text-primary uppercase tracking-widest mb-4">FAQ</p>
-        <h2 className="font-display text-3xl md:text-4xl font-bold">Questions? We got you.</h2>
+        <h2 className="font-display text-3xl md:text-4xl font-bold">Frequently asked questions</h2>
       </motion.div>
 
       <Accordion type="single" collapsible className="space-y-3">

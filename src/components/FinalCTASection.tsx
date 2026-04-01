@@ -16,7 +16,7 @@ const FinalCTASection = () => {
             Your next night out should take less guessing.
           </h2>
           <p className="text-muted-foreground text-lg mb-8">
-            Get early access to Live and start making better calls.
+            Get on the list for early access, product updates, and launch drops in your city.
           </p>
           <Button variant="hero" size="lg" onClick={() => scrollTo("waitlist")}>
             Join the Waitlist

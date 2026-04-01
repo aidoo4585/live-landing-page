@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
+import { Clock, MapPinOff, Users } from "lucide-react";
 
 const problems = [
-  { emoji: "😤", text: "You drive 30 minutes to a bar that's dead" },
-  { emoji: "📱", text: "You check Instagram stories but they're 3 hours old" },
-  { emoji: "🤷", text: "Your group can't agree on where to go so nobody goes" },
+  { icon: Clock, text: "Long lines you didn't expect" },
+  { icon: MapPinOff, text: "Bad venue picks you can't take back" },
+  { icon: Users, text: "Scattered group plans that go nowhere" },
 ];
 
 const ProblemSection = () => (
@@ -17,11 +18,11 @@ const ProblemSection = () => (
       >
         <p className="text-sm font-medium text-primary uppercase tracking-widest mb-4">The problem</p>
         <h2 className="font-display text-3xl md:text-4xl font-bold mb-12">
-          Nights out shouldn't feel like gambling.
+          Going out shouldn't feel like a gamble.
         </h2>
       </motion.div>
 
-      <div className="grid gap-6">
+      <div className="grid gap-5">
         {problems.map((p, i) => (
           <motion.div
             key={i}
@@ -31,7 +32,9 @@ const ProblemSection = () => (
             transition={{ duration: 0.5, delay: i * 0.15 }}
             className="glass-surface rounded-xl p-5 flex items-center gap-4 text-left"
           >
-            <span className="text-2xl">{p.emoji}</span>
+            <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+              <p.icon className="w-5 h-5 text-primary" />
+            </div>
             <p className="text-foreground text-base md:text-lg">{p.text}</p>
           </motion.div>
         ))}

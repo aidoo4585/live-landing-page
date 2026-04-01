@@ -15,12 +15,12 @@ const VenueOwnerSection = () => (
           <Building2 className="w-6 h-6 text-primary" />
         </div>
         <div>
-          <h3 className="font-display text-xl font-semibold mb-2">Own a venue?</h3>
+          <h3 className="font-display text-xl font-semibold mb-2">Own or run a venue?</h3>
           <p className="text-muted-foreground mb-5 leading-relaxed">
-            Live helps venues get discovered by people already nearby and ready to go out. Early venue partners get priority placement and direct access to our team.
+            We're building tools to help venues connect with people already nearby and ready to go out. Interested in early access or partnership? We'd love to hear from you.
           </p>
           <Button variant="hero-outline" size="sm" asChild>
-            <a href="mailto:venues@getlive.app">Get in Touch</a>
+            <a href="mailto:venues@getlive.app">Talk to Us</a>
           </Button>
         </div>
       </motion.div>
