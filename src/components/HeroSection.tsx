@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import heroPhone from "@/assets/phone-mockup-hero.png";
+import heroScreen from "@/assets/phone-mockup-hero.jpg";
 
 const HeroSection = () => {
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -38,13 +38,16 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex justify-center"
           >
-            <img
-              src={heroPhone}
-              alt="Live app showing nearby clubs with busyness indicators"
-              width={420}
-              height={420}
-              className="w-[300px] md:w-[380px] lg:w-[420px] animate-float drop-shadow-2xl"
-            />
+            <div className="relative w-[260px] md:w-[300px] lg:w-[320px]">
+              <div className="rounded-[2.5rem] border-[6px] border-[hsl(var(--border))] bg-card overflow-hidden shadow-2xl">
+                <img
+                  src={heroScreen}
+                  alt="Live app showing nearby clubs with busyness indicators"
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-6 bg-card rounded-b-2xl" />
+            </div>
           </motion.div>
         </div>
       </div>
