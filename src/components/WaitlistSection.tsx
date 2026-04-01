@@ -25,10 +25,10 @@ const WaitlistSection = () => {
           className="glass-surface rounded-2xl p-8 md:p-10 text-center glow-primary"
         >
           <h2 className="font-display text-2xl md:text-3xl font-bold mb-3">
-            Your next night out should take less guessing.
+            Make better calls before the line makes them for you.
           </h2>
           <p className="text-muted-foreground mb-8">
-            Join the waitlist and be first to know when Live launches.
+            Join the waitlist to get early access to Live as we expand the nightlife map.
           </p>
 
           {submitted ? (

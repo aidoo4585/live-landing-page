@@ -29,7 +29,7 @@ const BenefitsSection = () => (
         className="text-center mb-14"
       >
         <p className="text-sm font-medium text-primary uppercase tracking-widest mb-4">Why Live</p>
-        <h2 className="font-display text-3xl md:text-4xl font-bold">Better nights start with better info.</h2>
+        <h2 className="font-display text-3xl md:text-4xl font-bold">Real-time info for real nightlife decisions.</h2>
       </motion.div>
 
       <div className="grid md:grid-cols-3 gap-6">

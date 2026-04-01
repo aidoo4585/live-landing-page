@@ -2,10 +2,9 @@ import { motion } from "framer-motion";
 import featuresPhone from "@/assets/phone-mockup-features.png";
 
 const steps = [
-  { num: "01", title: "Open Live", desc: "See what's happening at nearby venues right now." },
-  { num: "02", title: "Check the vibe", desc: "View wait signals and busyness before you leave the house." },
-  { num: "03", title: "Find alternatives", desc: "Too packed? Get smart nearby suggestions instantly." },
-  { num: "04", title: "Link up", desc: "See where your friends are and meet up effortlessly." },
+  { num: "01", title: "Open Live", desc: "Check what nearby venues look like right now — busyness, wait signals, and vibe." },
+  { num: "02", title: "Compare options", desc: "Pivot to a better nearby spot if your first pick is too packed." },
+  { num: "03", title: "Sync with friends", desc: "See where your crew is out and meet up without the group chat chaos." },
 ];
 
 const HowItWorksSection = () => (
@@ -18,7 +17,7 @@ const HowItWorksSection = () => (
         className="text-center mb-14"
       >
         <p className="text-sm font-medium text-primary uppercase tracking-widest mb-4">How it works</p>
-        <h2 className="font-display text-3xl md:text-4xl font-bold">Four steps to a better night.</h2>
+        <h2 className="font-display text-3xl md:text-4xl font-bold">Three steps to a better night.</h2>
       </motion.div>
 
       <div className="grid lg:grid-cols-2 gap-12 items-center">
