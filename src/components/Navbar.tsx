@@ -39,6 +39,7 @@ const Navbar = () => {
           <button onClick={() => scrollTo("how-it-works")} className="hover:text-foreground transition-colors duration-200">How It Works</button>
           <button onClick={() => scrollTo("faq")} className="hover:text-foreground transition-colors duration-200">FAQ</button>
           <button onClick={() => scrollTo("venue-partners")} className="hover:text-foreground transition-colors duration-200">For Venues</button>
+          <a href="/support" className="hover:text-foreground transition-colors duration-200">Support</a>
           <Button variant="hero" size="sm" onClick={() => scrollTo("waitlist")}>Get Launch Alert</Button>
         </div>
 
@@ -54,6 +55,7 @@ const Navbar = () => {
             <button onClick={() => scrollTo("how-it-works")} className="text-sm text-muted-foreground text-left hover:text-foreground transition-colors">How It Works</button>
             <button onClick={() => scrollTo("faq")} className="text-sm text-muted-foreground text-left hover:text-foreground transition-colors">FAQ</button>
             <button onClick={() => scrollTo("venue-partners")} className="text-sm text-muted-foreground text-left hover:text-foreground transition-colors">For Venues</button>
+            <a href="/support" className="text-sm text-muted-foreground text-left hover:text-foreground transition-colors">Support</a>
             <Button variant="hero" size="sm" onClick={() => scrollTo("waitlist")}>Get Launch Alert</Button>
           </div>
         </div>
