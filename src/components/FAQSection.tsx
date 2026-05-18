@@ -4,23 +4,23 @@ import { motion } from "framer-motion";
 const faqs = [
   {
     q: "What is Live?",
-    a: "Live is a nightlife app that shows you real-time busyness signals, wait information, smart nearby alternatives, and where your friends are — so you always know where the night is actually worth it.",
+    a: "Live is a nightlife app that helps you decide where to go out with real-time wait signals, nearby alternatives, and friend coordination.",
   },
   {
     q: "Is Live only for Toronto?",
-    a: "We're launching in Toronto first to get things right. Other cities are on the roadmap — join the waitlist and tell us where you want Live next.",
+    a: "Right now, Live is focused on Toronto. More cities are planned after early rollout.",
   },
   {
     q: "How is this different from Google Maps or Instagram?",
-    a: "Google Maps tells you a venue exists. Instagram shows you what happened hours ago. Live tells you what's happening right now — busyness, wait signals, and where your friends actually are tonight.",
+    a: "Those tools help with discovery and photos. Live is built for the same-night decision: where to go, what the line looks like, and when to pivot.",
   },
   {
     q: "Can I use Live with friends?",
-    a: "Yes. Live makes it easy to see where your friends are out so you can coordinate without the group chat chaos.",
+    a: "Yes. Live is designed to make it easier to see where friends are and converge on the same spot.",
   },
   {
     q: "When can I get access?",
-    a: "We're rolling out access to waitlist members first. Join the waitlist and you'll be among the first to know.",
+    a: "Request the launch alert and we'll send the App Store link as soon as Live is available.",
   },
 ];
 
@@ -33,20 +33,34 @@ const FAQSection = () => (
         viewport={{ once: true }}
         className="text-center mb-12"
       >
-        <p className="text-sm font-medium text-primary uppercase tracking-widest mb-4">FAQ</p>
-        <h2 className="font-display text-3xl md:text-4xl font-bold">Frequently asked questions</h2>
+        <p className="eyebrow mb-4">FAQ</p>
+        <h2 className="font-display text-3xl md:text-4xl font-extrabold">Common questions</h2>
+        <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+          What Live does, where it's rolling out first, and how to get access.
+        </p>
       </motion.div>
 
       <Accordion type="single" collapsible className="space-y-3">
         {faqs.map((f, i) => (
-          <AccordionItem key={i} value={`faq-${i}`} className="glass-surface rounded-xl px-6 border-border/50">
-            <AccordionTrigger className="font-display font-semibold text-left hover:no-underline">
-              {f.q}
-            </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground leading-relaxed">
-              {f.a}
-            </AccordionContent>
-          </AccordionItem>
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.07 }}
+          >
+            <AccordionItem
+              value={`faq-${i}`}
+              className="glass-surface rounded-[1.35rem] px-6 border-border/50 hover:border-border/80 transition-colors duration-200"
+            >
+              <AccordionTrigger className="font-display font-semibold text-left hover:no-underline py-5 text-[1rem]">
+                {f.q}
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                {f.a}
+              </AccordionContent>
+            </AccordionItem>
+          </motion.div>
         ))}
       </Accordion>
     </div>
