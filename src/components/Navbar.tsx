@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import liveLogo from "@/assets/live-logo.svg";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -24,16 +25,13 @@ const Navbar = () => {
           scrolled ? "shadow-lg shadow-black/30" : ""
         }`}
       >
-        {/* Logo with live dot */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="flex items-center gap-2 group"
+          aria-label="Live home"
         >
+          <img src={liveLogo} alt="" className="h-8 w-8 rounded-[0.45rem] shadow-sm shadow-primary/20" />
           <span className="font-display text-xl font-extrabold text-primary tracking-tight">Live</span>
-          <span className="relative flex h-1.5 w-1.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-60" />
-            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-green-400" />
-          </span>
         </button>
 
         <div className="hidden md:flex items-center gap-6 text-sm text-muted-foreground">
